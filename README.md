@@ -229,7 +229,7 @@ Symbols list with fuzzy search to jump to. CTRL + s for file scope or CTRL + S f
 Documentation on symbol, SPACE + k . <br>
 ![helix_odin_img_4_doc_on_symbol](./images/helix_odin_img_4_doc_on_symbol.png) <br>
 
-Spell checking in two txt or markdown files one in English and one in Portuguese. <br>
+Spell checking in two txt or markdown files one in English and one in Portuguese. CTRL + a to see the popup with the correct spell. <br>
 ![helix_img_5_spell_checker_english_portuguese](./images/helix_img_5_spell_checker_english_portuguese.png) <br>
 
 How to set the correct dictionary for the selected document, it has the TAB or CTRL + i completion. <br>

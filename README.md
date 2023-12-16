@@ -29,21 +29,39 @@ sudo snap install marksman
 4. Then you have to create a file config.toml and save it to ```~/.config/helix/config.toml``` with the following content. To add a cool theme and the text wrapper for txt and markdown files. <br>
 
 ``` toml
+
 theme = "nightfox"
+
+[editor]
+bufferline = "always"
+# Whether to apply completion item instantly when selected.
+preview-completion-insert = false
 
 [editor.soft-wrap]
 enable = true
 max-wrap = 80 # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
-wrap-indicator = ""  # set wrap-indicator to "" to hide it 
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "register", "total-line-numbers", "position", "file-encoding"]
+
 ```   
 
 5. Then you have to add a file languages.toml to the ```~/.config/helix/languages.toml``` , with the following content. This will configure the Odin OLS server and tree-sitter syntax highlighting for Odin and the Markdown MarksMan OLS and syntax highlighting. <br> 
 
 ``` toml
+
 [language-server]
 ols      = { command = "ols", args = [] }
 marksman = { command = "marksman", args = ["server"] }
+
 
 [[language]]
 name = "odin"
@@ -63,7 +81,6 @@ name = "odin"
 source = { git = "https://github.com/amaanq/tree-sitter-odin" }
 
 
-
 [[language]]
 name = "markdown"
 scope = "source.md"
@@ -76,6 +93,7 @@ indent = { tab-width = 2, unit = "  " }
 [[grammar]]
 name = "markdown"
 source = { git = "https://github.com/MDeiml/tree-sitter-markdown", rev = "aaf76797aa8ecd9a5e78e0ec3681941de6c945ee", subpath = "tree-sitter-markdown" }
+
 ``` 
 
 6. Run Helix with the health option to see what is currently installed and supported on you machine.

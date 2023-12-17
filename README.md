@@ -33,9 +33,13 @@ sudo snap install marksman
 theme = "nightfox"
 
 [editor]
-bufferline = "always"
+bufferline = "multiple"
+cursorline = true
+color-modes = true
+lsp.display-inlay-hints = true
 # Whether to apply completion item instantly when selected.
 preview-completion-insert = false
+
 
 [editor.soft-wrap]
 enable = true
@@ -51,6 +55,9 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
 right = ["diagnostics", "selections", "register", "total-line-numbers", "position", "file-encoding"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 ```   
 
